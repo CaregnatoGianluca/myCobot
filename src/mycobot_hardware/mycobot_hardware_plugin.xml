@@ -1,0 +1,11 @@
+<library path="mycobot_hardware">
+  <class
+    name="mycobot_hardware/MyCobotHardwareInterface"
+    type="mycobot_hardware::MyCobotHardwareInterface"
+    base_class_type="hardware_interface::SystemInterface">
+    <description>
+      ros2_control hardware interface for the myCobot 280 Raspberry Pi.
+      Communicates with the ESP32 joint controllers via pymycobot serial protocol.
+    </description>
+  </class>
+</library>

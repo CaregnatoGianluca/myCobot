@@ -1,0 +1,6 @@
+# myCobot 280 Raspberry Pi hardware parameters
+# These are passed to the ros2_control hardware interface via the URDF <hardware><param> tags.
+
+mycobot_hardware:
+  serial_port: "/dev/ttyAMA0"   # default Pi UART — verify with: ls /dev/tty*
+  baud_rate: 1000000            # fixed by Elephant Robotics firmware
