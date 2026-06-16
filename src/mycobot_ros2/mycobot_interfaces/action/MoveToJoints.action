@@ -1,0 +1,12 @@
+# Goal
+float64[] joint_angles        # 6 values in radians (arm group joint order)
+float64 velocity_scale        # 0.0-1.0
+float64 acceleration_scale    # 0.0-1.0
+---
+# Result
+bool success
+string message
+float64[] achieved_joints
+---
+# Feedback
+string state                  # "planning" | "executing"

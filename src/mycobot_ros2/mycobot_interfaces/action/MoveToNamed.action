@@ -1,0 +1,11 @@
+# Goal
+string group_name             # "arm", "gripper", "arm_with_gripper"
+string target_name            # arm: "home","ready" / gripper: "open","half_closed","closed"
+float64 velocity_scale        # 0.0-1.0
+---
+# Result
+bool success
+string message
+---
+# Feedback
+string state                  # "planning" | "executing"
