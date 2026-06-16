@@ -14,3 +14,5 @@ colcon_packages.txt
 .DS_Store
 
 thesis.txt
+launch.txt
+rviz.rviz
