@@ -12,3 +12,5 @@ colcon_packages.txt
 .vscode/
 *.swp
 .DS_Store
+
+thesis.txt

@@ -1,0 +1,20 @@
+mycobot_driver:
+  ros__parameters:
+    robot_ip: "192.168.0.101"
+    robot_port: 9000
+    joint_speed: 30          # myCobot send_angles speed, 0-100 (keep low for first tests)
+    state_rate_hz: 20.0      # /joint_states publish rate
+    arm_joints:
+      - link1_to_link2
+      - link2_to_link3
+      - link3_to_link4
+      - link4_to_link5
+      - link5_to_link6
+      - link6_to_link6_flange
+    # Gripper: gripper_controller joint position (rad) -> myCobot value 0-100.
+    # open_pos -> 100 (open), closed_pos -> 0 (closed). Flip gripper_invert if reversed.
+    gripper_joint: gripper_controller
+    gripper_open_pos: 0.0
+    gripper_closed_pos: -0.5
+    gripper_speed: 50
+    gripper_invert: false

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mycobot_driver</name>
+  <version>0.1.0</version>
+  <description>
+    Real-robot driver for the myCobot 280 Pi. A WSL2-side ROS 2 node bridges
+    MoveIt2 to the physical arm: it serves the FollowJointTrajectory action and
+    publishes /joint_states, talking over a simple ASCII TCP protocol to
+    mycobot_tcp_bridge.py running on the robot's Raspberry Pi. Replaces the
+    ros2_control hardware interface for the real robot (no controller_manager,
+    no cross-distro DDS).
+  </description>
+  <maintainer email="gianluca.caregnato@gmail.com">Gianluca Caregnato</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>control_msgs</exec_depend>
+  <exec_depend>trajectory_msgs</exec_depend>
+  <exec_depend>builtin_interfaces</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
