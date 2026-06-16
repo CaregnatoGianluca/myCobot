@@ -1,0 +1,10 @@
+motion_server:
+  ros__parameters:
+    arm_group: "arm"
+    gripper_group: "gripper"
+    eef_link: "link6_flange"
+    default_velocity_scale: 0.1
+    default_acceleration_scale: 0.1
+    default_planning_pipeline: "ompl"
+    planning_time: 5.0
+    num_planning_attempts: 10
