@@ -63,7 +63,7 @@ def generate_launch_description():
 
     declare_rviz_config_file_cmd = DeclareLaunchArgument(
         name='rviz_config_file',
-        default_value='move_group.rviz',
+        default_value='mycobot_280.rviz',
         description='RViz configuration file')
 
     declare_rviz_config_package_cmd = DeclareLaunchArgument(
@@ -133,7 +133,8 @@ def generate_launch_description():
             executable="rviz2",
             arguments=[
                 "-d",
-                [FindPackageShare(rviz_config_package), "/rviz/", rviz_config_file]
+                [FindPackageShare(rviz_config_package), "/rviz/", rviz_config_file],
+                "--ros-args", "--log-level", "WARN",
             ],
             output="screen",
             parameters=[
